@@ -1,0 +1,60 @@
+# yuos-marketplace Actions — push/PR 时校验包 + 重建 index.json
+name: Build Marketplace Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/**'
+  pull_request:
+    paths:
+      - 'apps/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install jszip
+        run: npm install jszip@3 --no-save
+
+      - name: Verify packages & build index
+        run: |
+          node scripts/build-marketplace-index.mjs \
+            --root . \
+            --out index.json \
+            --base "https://cdn.jsdelivr.net/gh/${{ github.repository }}@${{ github.ref_name }}" \
+            --fallback-base "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}" \
+            --owner "${{ github.repository_owner }}" \
+            --repo "${{ github.event.repository.name }}"
+
+      - name: Verify index schema
+        run: |
+          node -e "
+            const idx = require('./index.json');
+            if (idx.format !== 'yuos-marketplace-index') throw new Error('bad format');
+            if (idx.schemaVersion !== 1) throw new Error('bad schemaVersion');
+            if (!Array.isArray(idx.apps)) throw new Error('apps not array');
+            for (const a of idx.apps) {
+              if (!a.id || !a.file || !a.sha256 || !a.version) throw new Error('bad app entry: ' + JSON.stringify(a));
+            }
+            console.log('index OK:', idx.apps.length, 'apps');
+          "
+
+      - name: Commit index (push only)
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "yuos-marketplace bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.json
+          git diff --cached --quiet || git commit -m "chore: rebuild marketplace index [skip ci]"
+          git push

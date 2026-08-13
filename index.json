@@ -1,0 +1,306 @@
+{
+  "format": "yuos-marketplace-index",
+  "schemaVersion": 1,
+  "source": {
+    "id": "zby-official",
+    "name": "小语官方坊市",
+    "type": "official",
+    "owner": "Miaolegemi9527",
+    "repo": "yuos-marketplace",
+    "base": "https://cdn.jsdelivr.net/gh/Miaolegemi9527/yuos-marketplace@main",
+    "fallbackBase": "",
+    "fingerprint": "",
+    "updatedAt": "2026-08-13T15:59:14.858Z"
+  },
+  "apps": [
+    {
+      "id": "xy-chinese-converter-msq3qwfc-1ek5gm",
+      "type": "app",
+      "name": "chinese-converter",
+      "displayName": "中文简繁转换",
+      "description": "简体中文 ⇄ 繁体中文双向转换，支持大批量文本处理，转换后可直接复制使用。",
+      "version": "1.0.0",
+      "file": "apps/app/chinese-converter/chinese-converter-v1.0.0.zby.zip",
+      "sizeBytes": 31028,
+      "sha256": "d160b0909eae7a5c73e8457e4e8fe1728cbf80ac27bee273a432a9e24b30c1a0",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"M6 8h12M6 12h12M6 16h8\"/></svg>",
+      "previews": [],
+      "category": "tool",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "electron"
+      ],
+      "permissions": [],
+      "tags": [
+        "简繁",
+        "繁简",
+        "简繁转换",
+        "中文转换",
+        "简繁体"
+      ]
+    },
+    {
+      "id": "xy-hex-color-msq3qwh9-whhfdh",
+      "type": "app",
+      "name": "hex-color",
+      "displayName": "16进制颜色转换",
+      "description": "输入 Hex 色值，实时预览颜色，一键转换为 RGB、HSL 格式。",
+      "version": "1.0.0",
+      "file": "apps/app/hex-color/hex-color-v1.0.0.zby.zip",
+      "sizeBytes": 15261,
+      "sha256": "1c4f6643eb5bfa5ec5455b4e76d08f05bc1e0f8fe072301dcaf7b58a2e4ae09d",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"currentColor\"/></svg>",
+      "previews": [],
+      "category": "tool",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "electron"
+      ],
+      "permissions": [],
+      "tags": [
+        "颜色",
+        "取色",
+        "色值转换",
+        "hex"
+      ]
+    },
+    {
+      "id": "xy-json-beautifier-msq3qwhi-1d5yec",
+      "type": "app",
+      "name": "json-beautifier",
+      "displayName": "JSON 美化",
+      "description": "粘贴 JSON 文本，一键格式化、排序键名、压缩或高亮预览。",
+      "version": "1.0.0",
+      "file": "apps/app/json-beautifier/json-beautifier-v1.0.0.zby.zip",
+      "sizeBytes": 16969,
+      "sha256": "055f5d6d8aae9b13b8153d75fb64fcb4ca5de0bee1598aa9db6c1dde56122501",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><polyline points=\"14 2 14 8 20 8\"/><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"/><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"/><polyline points=\"10 9 9 9 8 9\"/></svg>",
+      "previews": [],
+      "category": "tool",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "electron"
+      ],
+      "permissions": [],
+      "tags": [
+        "JSON",
+        "json格式化",
+        "JSON美化",
+        "格式化"
+      ]
+    },
+    {
+      "id": "xy-game-chess-msq3qwd4-gdfwz7",
+      "type": "game",
+      "name": "chess",
+      "displayName": "中国象棋",
+      "description": "9×10 棋盘 ，红黑双方各 16 子，将死对方将/帅者胜（支持 AI 对手）",
+      "version": "1.0.0",
+      "file": "apps/game/chess/chess-v1.0.0.zby.zip",
+      "sizeBytes": 32627,
+      "sha256": "809a99dab93402036a4fdc968cd6d03203c76dc6822f7ee5152b254a76d93213",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><line x1=\"3\" y1=\"9\" x2=\"21\" y2=\"9\" stroke-opacity=\"0.5\"/><line x1=\"3\" y1=\"15\" x2=\"21\" y2=\"15\" stroke-opacity=\"0.5\"/><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"21\" stroke-opacity=\"0.5\"/><line x1=\"15\" y1=\"3\" x2=\"15\" y2=\"21\" stroke-opacity=\"0.5\"/><circle cx=\"12\" cy=\"12\" r=\"2.5\" fill=\"currentColor\" fill-opacity=\"0.3\"/></svg>",
+      "previews": [],
+      "category": "game",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "electron"
+      ],
+      "permissions": [],
+      "tags": [
+        "中国象棋",
+        "象棋",
+        "chess",
+        "红黑棋"
+      ]
+    },
+    {
+      "id": "xy-game-go-msq3qwg4-1d2q6v",
+      "type": "game",
+      "name": "go",
+      "displayName": "围棋",
+      "description": "19×19 标准围棋，黑白交替落子，提子/劫争/数子法（支持 AI 对手，按 P 虚手）",
+      "version": "1.0.0",
+      "file": "apps/game/go/go-v1.0.0.zby.zip",
+      "sizeBytes": 30059,
+      "sha256": "d17f197cbe4d093d2159b444f045ed6d5d61a176dbae64b8835bbd82e1e96349",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><line x1=\"3\" y1=\"9\" x2=\"21\" y2=\"9\" stroke-opacity=\"0.4\"/><line x1=\"3\" y1=\"15\" x2=\"21\" y2=\"15\" stroke-opacity=\"0.4\"/><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"21\" stroke-opacity=\"0.4\"/><line x1=\"15\" y1=\"3\" x2=\"15\" y2=\"21\" stroke-opacity=\"0.4\"/><circle cx=\"7\" cy=\"7\" r=\"2\" fill=\"currentColor\"/><circle cx=\"17\" cy=\"17\" r=\"2\" fill=\"none\"/></svg>",
+      "previews": [],
+      "category": "game",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "electron"
+      ],
+      "permissions": [],
+      "tags": [
+        "围棋",
+        "go",
+        "weiqi",
+        "黑白棋",
+        "围子棋"
+      ]
+    },
+    {
+      "id": "xy-game-gomoku-msq3qwgr-tik77f",
+      "type": "game",
+      "name": "gomoku",
+      "displayName": "五子棋",
+      "description": "15×15 棋盘，黑白双方轮流落子，先连成 5 子者胜（支持 AI 对手）",
+      "version": "1.0.0",
+      "file": "apps/game/gomoku/gomoku-v1.0.0.zby.zip",
+      "sizeBytes": 27317,
+      "sha256": "4f067fe915378848017297a35cdb7be193cf77fb226bd3a845da23b4fdf51a0f",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"8\" cy=\"8\" r=\"4\"/><circle cx=\"16\" cy=\"16\" r=\"4\" fill=\"currentColor\"/><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\" stroke-opacity=\"0.4\"/></svg>",
+      "previews": [],
+      "category": "game",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "electron"
+      ],
+      "permissions": [],
+      "tags": [
+        "五子棋",
+        "gomoku",
+        "五子",
+        "连五子"
+      ]
+    },
+    {
+      "id": "xy-game-junqi-msq3qwht-1aje9x",
+      "type": "game",
+      "name": "junqi",
+      "displayName": "军棋",
+      "description": "暗棋制策略游戏，双方各 25 子，夺旗或歼灭对方军旗者胜（支持 AI 对手）",
+      "version": "1.0.0",
+      "file": "apps/game/junqi/junqi-v1.0.0.zby.zip",
+      "sizeBytes": 36795,
+      "sha256": "18e5280a7569404a03fc0fec1180adec24e7482bacf71a5b5b60ca1aa6015d01",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M12 7v10M7 12h10\"/><circle cx=\"12\" cy=\"12\" r=\"3\" fill=\"currentColor\" fill-opacity=\"0.3\"/></svg>",
+      "previews": [],
+      "category": "game",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "electron"
+      ],
+      "permissions": [],
+      "tags": [
+        "军棋",
+        "军旗",
+        "junqi",
+        "陆战棋"
+      ]
+    },
+    {
+      "id": "xy-game-tetris-msq3qwij-105oxq",
+      "type": "game",
+      "name": "tetris",
+      "displayName": "俄罗斯方块",
+      "description": "经典下落式方块消除游戏（方向键移动 / 上键旋转 / 空格速降）",
+      "version": "1.0.0",
+      "file": "apps/game/tetris/tetris-v1.0.0.zby.zip",
+      "sizeBytes": 28464,
+      "sha256": "c7dd8ec0b5a93181c3085997d1570440d3fc8123c60ad6ea93015a29d2b4a3e8",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"11\" y=\"3\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"3\" y=\"11\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"11\" y=\"11\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"15\" y=\"15\" width=\"6\" height=\"6\" rx=\"1\"/></svg>",
+      "previews": [],
+      "category": "game",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "electron"
+      ],
+      "permissions": [],
+      "tags": [
+        "俄罗斯方块",
+        "tetris",
+        "方块"
+      ]
+    }
+  ]
+}
