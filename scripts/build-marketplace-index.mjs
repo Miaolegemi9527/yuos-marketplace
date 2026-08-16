@@ -209,6 +209,7 @@ async function main() {
         displayName: String(m.displayName ?? m.name ?? name),
         description: String(m.description ?? ''),
         version: String(m.version),
+        build: Number(m.build ?? 1),
         file: rel,
         sizeBytes: inspected.sizeBytes,
         sha256: inspected.sha256,
