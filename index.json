@@ -10,7 +10,7 @@
     "base": "https://cdn.jsdelivr.net/gh/Miaolegemi9527/yuos-marketplace@main",
     "fallbackBase": "",
     "fingerprint": "",
-    "updatedAt": "2026-08-28T17:40:29.334Z"
+    "updatedAt": "2026-08-28T18:21:00.662Z"
   },
   "apps": [
     {
@@ -498,6 +498,206 @@
         "tetris",
         "方块"
       ]
+    },
+    {
+      "id": "xy-widget-official-clock",
+      "type": "widget",
+      "name": "xy-widget-official-clock",
+      "displayName": "极简时钟",
+      "description": "玻璃质感极简桌面时钟：时分秒与日期星期，自动适配皮肤明暗",
+      "version": "1.0.0",
+      "build": 1,
+      "file": "apps/widget/clock/xy-widget-official-clock-v1.0.0-b1.zby.zip",
+      "sizeBytes": 2252,
+      "sha256": "c501565b1bb46a31d1c263b11c6f387852242817d007d2cfa636a7f878014edb",
+      "signer": "zby-official",
+      "icon": "apps/widget/clock/icon.png",
+      "previews": [
+        "apps/widget/clock/preview-1.png"
+      ],
+      "category": "utility",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "官方首版：极简桌面时钟小组件",
+      "updatedAt": "2026-08-29T00:00:00.000Z",
+      "permissions": [],
+      "tags": []
+    },
+    {
+      "id": "xy-skin-official-aurora-glass",
+      "type": "skin",
+      "name": "xy-skin-official-aurora-glass",
+      "displayName": "极光玻璃",
+      "description": "极光紫青渐变玻璃质感皮肤：淡雅流光配色，深浅双套色板",
+      "version": "1.0.0",
+      "build": 1,
+      "file": "apps/skin/aurora-glass/xy-skin-official-aurora-glass-v1.0.0-b1.zby.zip",
+      "sizeBytes": 1256,
+      "sha256": "839073945ecdb1bd66122b6b7cae8a2f810b35df55523fcd7470fe8374809571",
+      "signer": "zby-official",
+      "icon": "apps/skin/aurora-glass/icon.png",
+      "previews": [
+        "apps/skin/aurora-glass/preview-1.png"
+      ],
+      "category": "utility",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "官方首版：极光紫青渐变玻璃皮肤",
+      "updatedAt": "2026-08-29T00:00:00.000Z",
+      "permissions": [],
+      "tags": []
+    },
+    {
+      "id": "xy-wallpaper-official-mountain-gradient",
+      "type": "wallpaper",
+      "name": "xy-wallpaper-official-mountain-gradient",
+      "displayName": "山水晨雾",
+      "description": "青蓝渐变山水壁纸：远山如黛、晨雾初开，随装饰主题色与深浅模式自动联动",
+      "version": "1.0.0",
+      "build": 1,
+      "file": "apps/wallpaper/mountain-gradient/xy-wallpaper-official-mountain-gradient-v1.0.0-b1.zby.zip",
+      "sizeBytes": 816,
+      "sha256": "5afbbb80c9fd9ce25d95eb67ede8c49f51705a384649b59639c3f934c08a7073",
+      "signer": "zby-official",
+      "icon": "apps/wallpaper/mountain-gradient/icon.png",
+      "previews": [
+        "apps/wallpaper/mountain-gradient/preview-1.png"
+      ],
+      "category": "utility",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "官方首版：青蓝渐变山水壁纸",
+      "updatedAt": "2026-08-29T00:00:00.000Z",
+      "permissions": [],
+      "tags": []
+    },
+    {
+      "id": "xy-animation-official-peach-petals",
+      "type": "animation",
+      "name": "xy-animation-official-peach-petals",
+      "displayName": "桃花飘落",
+      "description": "浅粉桃花瓣轻盈飘落，透明背景与点击穿透，不打扰桌面操作",
+      "version": "1.0.0",
+      "build": 1,
+      "file": "apps/animation/peach-petals/xy-animation-official-peach-petals-v1.0.0-b1.zby.zip",
+      "sizeBytes": 927,
+      "sha256": "8405cf5c48580891413c7b6ec72394cd9715b9f48898c1b52b2dd6668ca80fa7",
+      "signer": "zby-official",
+      "icon": "apps/animation/peach-petals/icon.png",
+      "previews": [
+        "apps/animation/peach-petals/preview-1.png"
+      ],
+      "category": "utility",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "官方首版：桃花飘落全屏动画",
+      "updatedAt": "2026-08-29T00:00:00.000Z",
+      "permissions": [],
+      "tags": []
+    },
+    {
+      "id": "xy-automation-official-morning-greeting",
+      "type": "automation",
+      "name": "xy-automation-official-morning-greeting",
+      "displayName": "早安问候",
+      "description": "每天 8:00 播放蒲公英动画并推送早安通知，开启元气满满的一天",
+      "version": "1.0.0",
+      "build": 1,
+      "file": "apps/automation/morning-greeting/xy-automation-official-morning-greeting-v1.0.0-b1.zby.zip",
+      "sizeBytes": 830,
+      "sha256": "6cfd8bca8ce57270cf537c35af4a1d84bcc77e078a0866302f18ef7aed6b94f2",
+      "signer": "zby-official",
+      "icon": "apps/automation/morning-greeting/icon.png",
+      "previews": [
+        "apps/automation/morning-greeting/preview-1.png"
+      ],
+      "category": "utility",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "官方首版：早安问候自动化规则",
+      "updatedAt": "2026-08-29T00:00:00.000Z",
+      "permissions": [],
+      "tags": []
     }
   ]
 }
