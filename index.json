@@ -10,7 +10,494 @@
     "base": "https://cdn.jsdelivr.net/gh/Miaolegemi9527/yuos-marketplace@main",
     "fallbackBase": "",
     "fingerprint": "",
-    "updatedAt": "2026-08-28T15:59:57.629Z"
+    "updatedAt": "2026-08-28T17:40:29.334Z"
   },
-  "apps": []
+  "apps": [
+    {
+      "id": "xy-app-official-chinese-converter",
+      "type": "app",
+      "name": "chinese-converter",
+      "displayName": "中文简繁转换",
+      "description": "简体中文 ⇄ 繁体中文双向转换，支持大批量文本处理，转换后可直接复制使用。",
+      "version": "1.0.0",
+      "build": 6,
+      "file": "apps/app/chinese-converter/xy-app-official-chinese-converter-v1.0.0-b6.zby.zip",
+      "sizeBytes": 33793,
+      "sha256": "e8e0ab73490b33a577805837075a19d308706cb7b44a4c320f01c9780ad4b0fc",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"M6 8h12M6 12h12M6 16h8\"/></svg>",
+      "previews": [],
+      "category": "tool",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "补齐皮肤 Token 注入（边框/悬停/排版），各主题皮肤下显示更协调；兼容性字段细化：声明 Web / Mac Intel / Apple Silicon / Windows / Windows 10+ / Linux 平台",
+      "updatedAt": "2026-08-22T08:00:00.000Z",
+      "permissions": [],
+      "tags": [
+        "简繁",
+        "繁简",
+        "简繁转换",
+        "中文转换",
+        "简繁体"
+      ]
+    },
+    {
+      "id": "xy-app-official-hex-color",
+      "type": "app",
+      "name": "hex-color",
+      "displayName": "16进制颜色转换",
+      "description": "输入 Hex 色值，实时预览颜色，一键转换为 RGB、HSL 格式。",
+      "version": "1.0.0",
+      "build": 6,
+      "file": "apps/app/hex-color/xy-app-official-hex-color-v1.0.0-b6.zby.zip",
+      "sizeBytes": 17817,
+      "sha256": "e19fb366cbbd8f478ae69a5e0c857882ba29a49f497ae49d502aca503f0b545c",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"currentColor\"/></svg>",
+      "previews": [],
+      "category": "tool",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "补齐皮肤 Token 注入（边框/悬停/排版），各主题皮肤下显示更协调；兼容性字段细化：声明 Web / Mac Intel / Apple Silicon / Windows / Windows 10+ / Linux 平台",
+      "updatedAt": "2026-08-22T08:00:00.000Z",
+      "permissions": [],
+      "tags": [
+        "颜色",
+        "取色",
+        "色值转换",
+        "hex"
+      ]
+    },
+    {
+      "id": "xy-app-official-illustration",
+      "type": "app",
+      "name": "illustration",
+      "displayName": "手绘配图",
+      "description": "为内容生成极简手绘风格配图（html2canvas 本地截图导出）",
+      "version": "1.0.0",
+      "build": 11,
+      "file": "apps/app/illustration/xy-app-official-illustration-v1.0.0-b11.zby.zip",
+      "sizeBytes": 30675,
+      "sha256": "62c08402dfa99bcd638c8eb04da2ba0df4eb10d0de151d1c3ab2587a26083dfe",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 15l5-5 4 4 3-3 6 6\"/><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"/></svg>",
+      "previews": [],
+      "category": "tool",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "保存图片升级为完整视图导出：含应用背景色与左右留白（与顶部信息卡对齐、不贴边）、剔除上传区/文件名/删除按钮/计数等编辑 UI、无滚动条；3 倍超采样输出更清晰；Toast 相同消息 400ms 去重；保存图片升级为系统保存对话框（用户自选保存位置，Electron 端提示保存路径）；修复沙箱内 a[download] 无下载权限被当作导航、图片从未真正落盘且重复提示的问题；补齐皮肤 Token 注入（边框/悬停/排版），各主题皮肤下显示更协调；兼容性字段细化：声明 Web / Mac Intel / Apple Silicon / Windows / Windows 10+ / Linux 平台；源信息显示优化（来源缺失时以消息网址域名兜底，无值字段不显示）+ 打开状态下切换源内容即时刷新（单例热传）；源内容卡片简化（去掉「源内容/标题」文字，标签改「摘要」，传值打开时无值字段隐藏）+ 卡片间距与文字对齐修复（首字段去顶部间距，小标题/来源与内容文字左对齐）",
+      "updatedAt": "2026-08-22T08:00:00.000Z",
+      "permissions": [
+        "fs:write:user"
+      ],
+      "tags": [
+        "手绘",
+        "配图",
+        "手绘配图"
+      ]
+    },
+    {
+      "id": "xy-app-official-json-beautifier",
+      "type": "app",
+      "name": "json-beautifier",
+      "displayName": "JSON 美化",
+      "description": "粘贴 JSON 文本，一键格式化、排序键名、压缩或高亮预览。",
+      "version": "1.0.0",
+      "build": 6,
+      "file": "apps/app/json-beautifier/xy-app-official-json-beautifier-v1.0.0-b6.zby.zip",
+      "sizeBytes": 19670,
+      "sha256": "034dfc5b5d49131a10e698e6f4684a288502f3c73174afd39cea92b5bbf25e6a",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><polyline points=\"14 2 14 8 20 8\"/><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"/><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"/><polyline points=\"10 9 9 9 8 9\"/></svg>",
+      "previews": [],
+      "category": "tool",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "补齐皮肤 Token 注入（边框/悬停/排版），各主题皮肤下显示更协调；兼容性字段细化：声明 Web / Mac Intel / Apple Silicon / Windows / Windows 10+ / Linux 平台",
+      "updatedAt": "2026-08-22T08:00:00.000Z",
+      "permissions": [],
+      "tags": [
+        "JSON",
+        "json格式化",
+        "JSON美化",
+        "格式化"
+      ]
+    },
+    {
+      "id": "xy-app-official-portfolio",
+      "type": "app",
+      "name": "portfolio",
+      "displayName": "作品集",
+      "description": "小语项目作品集——浏览器/相机 App 产品截图卡阵（React + htm + Tailwind 全部本地化）",
+      "version": "1.0.0",
+      "build": 6,
+      "file": "apps/app/portfolio/xy-app-official-portfolio-v1.0.0-b6.zby.zip",
+      "sizeBytes": 672268,
+      "sha256": "64a718d9419fe83a5a3ce75966285436ee94d54a13622c004252a360e48048a9",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\"/><path d=\"M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\"/></svg>",
+      "previews": [],
+      "category": "content",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "补齐皮肤 Token 注入（边框/悬停/排版），各主题皮肤下显示更协调；兼容性字段细化：声明 Web / Mac Intel / Apple Silicon / Windows / Windows 10+ / Linux 平台",
+      "updatedAt": "2026-08-22T08:00:00.000Z",
+      "permissions": [],
+      "tags": [
+        "作品集",
+        "portfolio",
+        "作品展示"
+      ]
+    },
+    {
+      "id": "xy-game-official-chess",
+      "type": "game",
+      "name": "chess",
+      "displayName": "中国象棋",
+      "description": "9×10 棋盘 ，红黑双方各 16 子，将死对方将/帅者胜（支持 AI 对手）",
+      "version": "1.0.0",
+      "build": 15,
+      "file": "apps/game/chess/xy-game-official-chess-v1.0.0-b15.zby.zip",
+      "sizeBytes": 43438,
+      "sha256": "7c73daa6a4add2aeb8c4aff07a5ef3ead4b2f2a581377962114ebb544cd398f2",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><line x1=\"3\" y1=\"9\" x2=\"21\" y2=\"9\" stroke-opacity=\"0.5\"/><line x1=\"3\" y1=\"15\" x2=\"21\" y2=\"15\" stroke-opacity=\"0.5\"/><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"21\" stroke-opacity=\"0.5\"/><line x1=\"15\" y1=\"3\" x2=\"15\" y2=\"21\" stroke-opacity=\"0.5\"/><circle cx=\"12\" cy=\"12\" r=\"2.5\" fill=\"currentColor\" fill-opacity=\"0.3\"/></svg>",
+      "previews": [],
+      "category": "game",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "主题皮肤适配二期：游戏宿主/HUD 玻璃化（GlassSidePanel 同款配方，坊市体验层不再泛白）；暂停遮罩文字固定浅色（深色遮罩底上不再黑乎乎）；canvas/加载遮罩透明化防白块闪现；兼容性字段细化：声明 Web / Mac Intel / Apple Silicon / Windows / Windows 10+ / Linux 平台；完全卸载数据治理：声明最高分存储键（game:best:*），完全卸载时一并清除",
+      "updatedAt": "2026-08-23T08:00:00.000Z",
+      "permissions": [
+        "storage"
+      ],
+      "tags": [
+        "中国象棋",
+        "象棋",
+        "chess",
+        "红黑棋"
+      ]
+    },
+    {
+      "id": "xy-game-official-go",
+      "type": "game",
+      "name": "go",
+      "displayName": "围棋",
+      "description": "19×19 标准围棋，黑白交替落子，提子/劫争/数子法（支持 AI 对手，按 P 虚手）",
+      "version": "1.0.0",
+      "build": 15,
+      "file": "apps/game/go/xy-game-official-go-v1.0.0-b15.zby.zip",
+      "sizeBytes": 40716,
+      "sha256": "5eca6d081c266b2cc422a8980af6f0b7d33bc5cb49ab34e880a30a2c7d3e37bf",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><line x1=\"3\" y1=\"9\" x2=\"21\" y2=\"9\" stroke-opacity=\"0.4\"/><line x1=\"3\" y1=\"15\" x2=\"21\" y2=\"15\" stroke-opacity=\"0.4\"/><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"21\" stroke-opacity=\"0.4\"/><line x1=\"15\" y1=\"3\" x2=\"15\" y2=\"21\" stroke-opacity=\"0.4\"/><circle cx=\"7\" cy=\"7\" r=\"2\" fill=\"currentColor\"/><circle cx=\"17\" cy=\"17\" r=\"2\" fill=\"none\"/></svg>",
+      "previews": [],
+      "category": "game",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "主题皮肤适配二期：游戏宿主/HUD 玻璃化（GlassSidePanel 同款配方，坊市体验层不再泛白）；暂停遮罩文字固定浅色（深色遮罩底上不再黑乎乎）；canvas/加载遮罩透明化防白块闪现；兼容性字段细化：声明 Web / Mac Intel / Apple Silicon / Windows / Windows 10+ / Linux 平台；完全卸载数据治理：声明最高分存储键（game:best:*），完全卸载时一并清除",
+      "updatedAt": "2026-08-23T08:00:00.000Z",
+      "permissions": [
+        "storage"
+      ],
+      "tags": [
+        "围棋",
+        "go",
+        "weiqi",
+        "黑白棋",
+        "围子棋"
+      ]
+    },
+    {
+      "id": "xy-game-official-gomoku",
+      "type": "game",
+      "name": "gomoku",
+      "displayName": "五子棋",
+      "description": "15×15 棋盘，黑白双方轮流落子，先连成 5 子者胜（支持 AI 对手）",
+      "version": "1.0.0",
+      "build": 15,
+      "file": "apps/game/gomoku/xy-game-official-gomoku-v1.0.0-b15.zby.zip",
+      "sizeBytes": 37967,
+      "sha256": "e2e4fec1dcc77622d0ba40bd51352f40d8cf15650f54ae1605346724980a02d4",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"8\" cy=\"8\" r=\"4\"/><circle cx=\"16\" cy=\"16\" r=\"4\" fill=\"currentColor\"/><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\" stroke-opacity=\"0.4\"/></svg>",
+      "previews": [],
+      "category": "game",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "主题皮肤适配二期：游戏宿主/HUD 玻璃化（GlassSidePanel 同款配方，坊市体验层不再泛白）；暂停遮罩文字固定浅色（深色遮罩底上不再黑乎乎）；canvas/加载遮罩透明化防白块闪现；兼容性字段细化：声明 Web / Mac Intel / Apple Silicon / Windows / Windows 10+ / Linux 平台；完全卸载数据治理：声明最高分存储键（game:best:*），完全卸载时一并清除",
+      "updatedAt": "2026-08-23T08:00:00.000Z",
+      "permissions": [
+        "storage"
+      ],
+      "tags": [
+        "五子棋",
+        "gomoku",
+        "五子",
+        "连五子"
+      ]
+    },
+    {
+      "id": "xy-game-official-junqi",
+      "type": "game",
+      "name": "junqi",
+      "displayName": "军棋",
+      "description": "暗棋制策略游戏，双方各 25 子，夺旗或歼灭对方军旗者胜（支持 AI 对手）",
+      "version": "1.0.0",
+      "build": 15,
+      "file": "apps/game/junqi/xy-game-official-junqi-v1.0.0-b15.zby.zip",
+      "sizeBytes": 47606,
+      "sha256": "4256dc39e5ef307eb5b96d4a455e994eef8553255ccd84da5b1c31cb52aac4f5",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M12 7v10M7 12h10\"/><circle cx=\"12\" cy=\"12\" r=\"3\" fill=\"currentColor\" fill-opacity=\"0.3\"/></svg>",
+      "previews": [],
+      "category": "game",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "主题皮肤适配二期：游戏宿主/HUD 玻璃化（GlassSidePanel 同款配方，坊市体验层不再泛白）；暂停遮罩文字固定浅色（深色遮罩底上不再黑乎乎）；canvas/加载遮罩透明化防白块闪现；兼容性字段细化：声明 Web / Mac Intel / Apple Silicon / Windows / Windows 10+ / Linux 平台；完全卸载数据治理：声明最高分存储键（game:best:*），完全卸载时一并清除",
+      "updatedAt": "2026-08-23T08:00:00.000Z",
+      "permissions": [
+        "storage"
+      ],
+      "tags": [
+        "军棋",
+        "军旗",
+        "junqi",
+        "陆战棋"
+      ]
+    },
+    {
+      "id": "xy-game-official-tank",
+      "type": "game",
+      "name": "tank",
+      "displayName": "坦克大战",
+      "description": "经典坦克大战，保护基地、消灭敌方坦克、关卡递进（Phaser 4 引擎）",
+      "version": "1.0.0",
+      "build": 15,
+      "file": "apps/game/tank/xy-game-official-tank-v1.0.0-b15.zby.zip",
+      "sizeBytes": 47687,
+      "sha256": "7158d0749f8d08b78c47c3a1e580280ed2b801633edd330be1f474c1272d427a",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"14\" width=\"14\" height=\"5\" rx=\"1\"/><rect x=\"7\" y=\"10\" width=\"8\" height=\"4\" rx=\"1\"/><line x1=\"11\" y1=\"10\" x2=\"20\" y2=\"6\"/><circle cx=\"8\" cy=\"20\" r=\"1.5\" fill=\"currentColor\"/><circle cx=\"14\" cy=\"20\" r=\"1.5\" fill=\"currentColor\"/></svg>",
+      "previews": [],
+      "category": "game",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "主题皮肤适配二期：游戏宿主/HUD 玻璃化（GlassSidePanel 同款配方，坊市体验层不再泛白）；暂停遮罩文字固定浅色（深色遮罩底上不再黑乎乎）；canvas/加载遮罩透明化防白块闪现；HUD 词表补全 5 语真实文案（修复顶部导航文字缺失）；v5.1 画布居中修复：关闭 Phaser autoCenter（其固定 margin 与 flex 居中叠加产生双倍偏移），改由 canvas 容器 flex 居中，窗口任意尺寸下游戏视图严格居中；兼容性字段细化：声明 Web / Mac Intel / Apple Silicon / Windows / Windows 10+ / Linux 平台；完全卸载数据治理：声明最高分存储键（game:best:*），完全卸载时一并清除",
+      "updatedAt": "2026-08-23T08:00:00.000Z",
+      "permissions": [
+        "storage"
+      ],
+      "tags": [
+        "坦克大战",
+        "坦克",
+        "tank",
+        "Battle City"
+      ]
+    },
+    {
+      "id": "xy-game-official-tetris",
+      "type": "game",
+      "name": "tetris",
+      "displayName": "俄罗斯方块",
+      "description": "经典下落式方块消除游戏（方向键移动 / 上键旋转 / 空格速降）",
+      "version": "1.0.0",
+      "build": 15,
+      "file": "apps/game/tetris/xy-game-official-tetris-v1.0.0-b15.zby.zip",
+      "sizeBytes": 38942,
+      "sha256": "6c2fe8e1683bf7b4d32d484e68a077eff59b5326f17cd9b3330e140f94e55b12",
+      "signer": "zby-official",
+      "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"11\" y=\"3\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"3\" y=\"11\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"11\" y=\"11\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"15\" y=\"15\" width=\"6\" height=\"6\" rx=\"1\"/></svg>",
+      "previews": [],
+      "category": "game",
+      "developer": "小语团队",
+      "developerUrl": "https://github.com/Miaolegemi9527/YUOS",
+      "copyright": "© 2026 小语",
+      "supportedLanguages": [
+        "zh-CN",
+        "zh-TW",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "compatibility": [
+        "web",
+        "macos-intel",
+        "macos-arm64",
+        "windows",
+        "windows-10+",
+        "linux"
+      ],
+      "updatedContent": "主题皮肤适配二期：游戏宿主/HUD 玻璃化（GlassSidePanel 同款配方，坊市体验层不再泛白）；暂停遮罩文字固定浅色（深色遮罩底上不再黑乎乎）；canvas/加载遮罩透明化防白块闪现；兼容性字段细化：声明 Web / Mac Intel / Apple Silicon / Windows / Windows 10+ / Linux 平台；完全卸载数据治理：声明最高分存储键（game:best:*），完全卸载时一并清除",
+      "updatedAt": "2026-08-23T08:00:00.000Z",
+      "permissions": [
+        "storage"
+      ],
+      "tags": [
+        "俄罗斯方块",
+        "tetris",
+        "方块"
+      ]
+    }
+  ]
 }
