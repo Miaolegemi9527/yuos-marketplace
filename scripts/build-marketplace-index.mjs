@@ -4,7 +4,7 @@
  *
  * 扫描 yuos-marketplace/apps/<type>/<name>/*.zby.zip：
  *   1. zip 完整性（可解包 + manifest.json 存在）
- *   2. manifest schema 校验（format=zby-creation / type / appId / version）
+ *   2. manifest schema 校验（format=zby-creation / type / id / version）
  *   3. 官方签名验签（ECDSA P-256 + SHA-256，公钥内嵌，与客户端 official-key.ts 同源）
  *   4. 收集 icon.png / preview-*.png / README.md → 生成 index.json
  *
@@ -78,10 +78,10 @@ async function verifyOfficialSignature(manifest, filesList) {
   if (sig === null || typeof sig !== 'object') return { ok: false, reason: '缺少 signature' };
   if (String(sig.algorithm ?? '') !== 'ECDSA-P256-SHA256') return { ok: false, reason: '算法不支持：' + String(sig.algorithm ?? '') };
   if (String(sig.signer ?? '') !== 'zby-official') return { ok: false, reason: '签名者非官方：' + String(sig.signer ?? '') };
-  /* 剥离签名自身与系统内部键（signature/appId/contract/_zby.*），与打包侧一致 */
+  /* 剥离签名自身与系统内部键（signature/id/contract/_zby.*），与打包侧一致 */
   const clean = {};
   for (const [key, val] of Object.entries(manifest)) {
-    if (key === 'signature' || key === 'appId' || key === 'contract' || key.startsWith('_zby.')) continue;
+    if (key === 'signature' || key === 'id' || key === 'contract' || key.startsWith('_zby.')) continue;
     clean[key] = val;
   }
   const payload = canonicalJson({ manifest: clean, files: filesList });
@@ -124,7 +124,7 @@ async function inspectZip(zipPath) {
     return { ok: false, reason: 'manifest.json 不是有效 JSON' };
   }
   if (manifest.format !== 'zby-creation') return { ok: false, reason: 'format=' + String(manifest.format ?? '') };
-  if (typeof manifest.appId !== 'string' || manifest.appId === '') return { ok: false, reason: '缺少 appId' };
+  if (typeof manifest.id !== 'string' || manifest.id === '') return { ok: false, reason: '缺少 id' };
   if (typeof manifest.version !== 'string' || manifest.version === '') return { ok: false, reason: '缺少 version' };
 
   /* 验签：filesList = 包内产物文件哈希（排除 manifest/contract/README/versions/，与打包/导入侧一致） */
@@ -159,7 +159,31 @@ async function inspectZip(zipPath) {
 }
 
 /* ── 主流程 ───────────────────────────── */
-const CREATION_TYPES = ['app', 'game', 'widget', 'theme', 'skin', 'wallpaper', 'animation', 'plugin', 'skill', 'script', 'automation'];
+const CREATION_TYPES = ['app', 'game', 'widget', 'skin', 'wallpaper', 'animation', 'automation'];
+
+/** 从 zip 文件名解析语义版本（<id>-v<version>-b<build>.zby.zip）；解析失败返回 null */
+function parseZipVersion(name) {
+  const m = /-v(\d+\.\d+\.\d+)(?:-b(\d+))?\.zby\.zip$/.exec(name);
+  if (m === null) return null;
+  return {
+    version: m[1].split('.').map((n) => Number(n)),
+    build: m[2] !== undefined ? Number(m[2]) : 0,
+  };
+}
+
+/** 版本比较：先比 version 再比 build（numeric）；无法解析的按文件名兜底（排在前面） */
+function compareZipVersion(a, b) {
+  const pa = parseZipVersion(a);
+  const pb = parseZipVersion(b);
+  if (pa === null && pb === null) return a < b ? -1 : a > b ? 1 : 0;
+  if (pa === null) return -1;
+  if (pb === null) return 1;
+  for (let i = 0; i < 3; i++) {
+    const d = pa.version[i] - pb.version[i];
+    if (d !== 0) return d;
+  }
+  return pa.build - pb.build;
+}
 
 async function main() {
   const args = parseArgs(process.argv);
@@ -180,9 +204,10 @@ async function main() {
       const appDir = join(typeDir, name);
       /* 跳过非目录条目（如 .DS_Store），避免 ENOTDIR 崩溃 */
       if (!statSync(appDir).isDirectory()) continue;
-      const zips = readdirSync(appDir).filter((f) => f.endsWith('.zby.zip')).sort();
+      const zips = readdirSync(appDir).filter((f) => f.endsWith('.zby.zip'));
       if (zips.length === 0) continue;
-      /* 取最高版本 zip（按文件名排序取最后一个，约定 name-vX.Y.Z.zby.zip） */
+      /* 取最高版本 zip（语义排序：version + build numeric，防 -b15 < -b6 字符串序取错） */
+      zips.sort(compareZipVersion);
       const zipName = zips[zips.length - 1];
       const zipPath = join(appDir, zipName);
       const rel = relative(root, zipPath).split('/').join('/');
@@ -203,7 +228,7 @@ async function main() {
       const icon = iconFile !== undefined ? relative(root, join(appDir, iconFile)).split('/').join('/') : String(m.icon ?? '');
 
       apps.push({
-        id: String(m.appId),
+        id: String(m.id),
         type,
         name: String(m.name ?? name),
         displayName: String(m.displayName ?? m.name ?? name),
@@ -221,7 +246,12 @@ async function main() {
         developerUrl: String(m.developerUrl ?? ''),
         copyright: String(m.copyright ?? '© 2026 小语'),
         supportedLanguages: Array.isArray(m.supportedLanguages) ? m.supportedLanguages : ['zh-CN', 'zh-TW', 'en', 'ja', 'ko'],
-        compatibility: Array.isArray(m.compatibility) ? m.compatibility : ['web', 'electron'],
+        compatibility: Array.isArray(m.compatibility) ? m.compatibility : ['web', 'macos-intel', 'macos-arm64', 'windows', 'windows-10+', 'linux'],
+        /* 更新内容/时间（与 build-app-store-local 同源）：优先包内声明，缺省回退索引构建时间 */
+        updatedContent: String(m.changelog ?? m.updatedContent ?? ''),
+        updatedAt: String(m.updatedAt ?? new Date().toISOString()),
+        /* AI 改造版身份（与 build-app-store-local 同源透传） */
+        ...(typeof m.remixOf === 'string' && m.remixOf !== '' ? { remixOf: m.remixOf } : {}),
         permissions: Array.isArray(m.permissions) ? m.permissions : [],
         tags: Array.isArray(m.aliases) ? m.aliases.slice(0, 8) : [],
       });
