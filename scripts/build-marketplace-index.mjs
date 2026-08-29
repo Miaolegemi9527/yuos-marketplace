@@ -127,7 +127,7 @@ async function inspectZip(zipPath) {
   if (typeof manifest.id !== 'string' || manifest.id === '') return { ok: false, reason: '缺少 id' };
   if (typeof manifest.version !== 'string' || manifest.version === '') return { ok: false, reason: '缺少 version' };
 
-  /* 验签：filesList = 包内产物文件哈希（排除 manifest/contract/README/versions/，与打包/导入侧一致） */
+  /* 验签：filesList = 包内产物文件哈希（排除 manifest/contract/README/versions/preview-*，与打包/导入侧一致） */
   const filesEntry = zip.file('files.json');
   let filesList;
   if (filesEntry === null) {
@@ -136,6 +136,8 @@ async function inspectZip(zipPath) {
     for (const [path, f] of Object.entries(zip.files)) {
       if (f.dir) continue;
       if (path === 'manifest.json' || path === 'contract.json' || path === 'README.md' || path.startsWith('versions/')) continue;
+      /* B3：preview-* 二进制附件不计入签名集合（三端统一排除，附件仅作目录展示） */
+      if (/^preview-\d+\.(png|jpe?g|webp)$/i.test(path)) continue;
       filesList.push({ path, sha256: sha256(await f.async('uint8array')) });
     }
     filesList.sort((a, b) => a.path.localeCompare(b.path));
