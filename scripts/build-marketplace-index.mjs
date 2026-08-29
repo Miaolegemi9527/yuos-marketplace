@@ -224,8 +224,15 @@ async function main() {
       for (const f of readdirSync(appDir).sort()) {
         if (/^preview-\d+\.(png|jpg|jpeg|webp)$/i.test(f)) previews.push(relative(root, join(appDir, f)).split('/').join('/'));
       }
+      /* icon：manifest.icon（内联 SVG）优先——客户端 safeSvg 只消费 <svg> 字符串；
+         目录 icon.png 仅作兜底（无 manifest.icon 的社区包，客户端渲染首字母占位） */
       const iconFile = readdirSync(appDir).find((f) => f.toLowerCase() === 'icon.png');
-      const icon = iconFile !== undefined ? relative(root, join(appDir, iconFile)).split('/').join('/') : String(m.icon ?? '');
+      const icon =
+        String(m.icon ?? '') !== ''
+          ? String(m.icon)
+          : iconFile !== undefined
+            ? relative(root, join(appDir, iconFile)).split('/').join('/')
+            : '';
 
       apps.push({
         id: String(m.id),
