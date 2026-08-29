@@ -10,7 +10,7 @@
     "base": "https://cdn.jsdelivr.net/gh/Miaolegemi9527/yuos-marketplace@main",
     "fallbackBase": "",
     "fingerprint": "",
-    "updatedAt": "2026-08-29T03:27:43.586Z"
+    "updatedAt": "2026-08-29T03:51:48.013Z"
   },
   "apps": [
     {
@@ -22,8 +22,8 @@
       "version": "1.0.0",
       "build": 6,
       "file": "apps/app/chinese-converter/xy-app-official-chinese-converter-v1.0.0-b6.zby.zip",
-      "sizeBytes": 80412,
-      "sha256": "170e54aa40ddbd00854618c38f08da221fe90e9a95373f53007e1581c6e3471a",
+      "sizeBytes": 80415,
+      "sha256": "2119ad6845f82c0dcda2a992f3c517b649d8a0bbbfbafd10667283d8156ce48f",
       "signer": "zby-official",
       "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"M6 8h12M6 12h12M6 16h8\"/></svg>",
       "previews": [
@@ -68,8 +68,8 @@
       "version": "1.0.0",
       "build": 6,
       "file": "apps/app/hex-color/xy-app-official-hex-color-v1.0.0-b6.zby.zip",
-      "sizeBytes": 66504,
-      "sha256": "3dce576671d9e98cbd1628a3a6338bb10bd2b0ed9692a1734e0b5492252a256e",
+      "sizeBytes": 66510,
+      "sha256": "f8055e3cbe3ae1b33780c1af488402fc97aee5aa95bc996809cb3479fae8ab83",
       "signer": "zby-official",
       "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"currentColor\"/></svg>",
       "previews": [
@@ -114,7 +114,7 @@
       "build": 11,
       "file": "apps/app/illustration/xy-app-official-illustration-v1.0.0-b11.zby.zip",
       "sizeBytes": 59013,
-      "sha256": "4eaab458cc90f7f9e7b828e2ee246ba93d5078733da2e2d8246463e0c340c737",
+      "sha256": "e36067fdf216ffc9176a6d46be1dddb2098f8e5d4ecb6c3d973094abf2afee4b",
       "signer": "zby-official",
       "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 15l5-5 4 4 3-3 6 6\"/><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"/></svg>",
       "previews": [
@@ -159,8 +159,8 @@
       "version": "1.0.0",
       "build": 6,
       "file": "apps/app/json-beautifier/xy-app-official-json-beautifier-v1.0.0-b6.zby.zip",
-      "sizeBytes": 64634,
-      "sha256": "961d893110e93e238b7644210b55138ba30ca25d3f731b22a1cf4c0e5fcfe8d0",
+      "sizeBytes": 64632,
+      "sha256": "5a60ed8c3f09d014a3c4286e98478e16767235270ec569f1a50195d05b6a21b7",
       "signer": "zby-official",
       "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><polyline points=\"14 2 14 8 20 8\"/><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"/><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"/><polyline points=\"10 9 9 9 8 9\"/></svg>",
       "previews": [
@@ -204,8 +204,8 @@
       "version": "1.0.0",
       "build": 6,
       "file": "apps/app/portfolio/xy-app-official-portfolio-v1.0.0-b6.zby.zip",
-      "sizeBytes": 696891,
-      "sha256": "d06868419e3bfa200252383632f8f18e1b49c964b98adbf5136921b65476a9d6",
+      "sizeBytes": 696894,
+      "sha256": "1c2185e7f409ae240cb4f1966959b3db2a63ac378b473548a782b673e238a0c7",
       "signer": "zby-official",
       "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\"/><path d=\"M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\"/></svg>",
       "previews": [
@@ -248,8 +248,8 @@
       "version": "1.0.0",
       "build": 15,
       "file": "apps/game/chess/xy-game-official-chess-v1.0.0-b15.zby.zip",
-      "sizeBytes": 166477,
-      "sha256": "fbfcd27c5fe86bb69db1944cbfe32b9256113a2c8cd043e23922db8c0731136a",
+      "sizeBytes": 166476,
+      "sha256": "a0affb228fa72c5c916eca71f87e2a4e5a3742ea3cd64896ef44a812506171c4",
       "signer": "zby-official",
       "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><line x1=\"3\" y1=\"9\" x2=\"21\" y2=\"9\" stroke-opacity=\"0.5\"/><line x1=\"3\" y1=\"15\" x2=\"21\" y2=\"15\" stroke-opacity=\"0.5\"/><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"21\" stroke-opacity=\"0.5\"/><line x1=\"15\" y1=\"3\" x2=\"15\" y2=\"21\" stroke-opacity=\"0.5\"/><circle cx=\"12\" cy=\"12\" r=\"2.5\" fill=\"currentColor\" fill-opacity=\"0.3\"/></svg>",
       "previews": [
@@ -296,7 +296,7 @@
       "build": 15,
       "file": "apps/game/go/xy-game-official-go-v1.0.0-b15.zby.zip",
       "sizeBytes": 162817,
-      "sha256": "efdbb91e51650077e44884a4f83c21a1c5351fdc34267ebc5dde41d6c0a22ee9",
+      "sha256": "78a33d4ba53d1a2d1110b4e8fc531a89fd538ead2f2c4f82b1e93b65de1b1411",
       "signer": "zby-official",
       "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><line x1=\"3\" y1=\"9\" x2=\"21\" y2=\"9\" stroke-opacity=\"0.4\"/><line x1=\"3\" y1=\"15\" x2=\"21\" y2=\"15\" stroke-opacity=\"0.4\"/><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"21\" stroke-opacity=\"0.4\"/><line x1=\"15\" y1=\"3\" x2=\"15\" y2=\"21\" stroke-opacity=\"0.4\"/><circle cx=\"7\" cy=\"7\" r=\"2\" fill=\"currentColor\"/><circle cx=\"17\" cy=\"17\" r=\"2\" fill=\"none\"/></svg>",
       "previews": [
@@ -343,8 +343,8 @@
       "version": "1.0.0",
       "build": 15,
       "file": "apps/game/gomoku/xy-game-official-gomoku-v1.0.0-b15.zby.zip",
-      "sizeBytes": 142353,
-      "sha256": "9f1d8b40a99944de5d44f13349b7e40e18eeb2a55b3cfffa30b61886266ea11b",
+      "sizeBytes": 142357,
+      "sha256": "c18f936051ca70b181ba09670efb74af950fad264f6349218119f6f0de1122e0",
       "signer": "zby-official",
       "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"8\" cy=\"8\" r=\"4\"/><circle cx=\"16\" cy=\"16\" r=\"4\" fill=\"currentColor\"/><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\" stroke-opacity=\"0.4\"/></svg>",
       "previews": [
@@ -390,8 +390,8 @@
       "version": "1.0.0",
       "build": 15,
       "file": "apps/game/junqi/xy-game-official-junqi-v1.0.0-b15.zby.zip",
-      "sizeBytes": 148710,
-      "sha256": "e6dcc964d34202585231da976fe5c917a29121ac6c953cea417fae5335680af1",
+      "sizeBytes": 148709,
+      "sha256": "99a5bf5986e12c515c3b4cf065a21385d25337df81611215ae8159ef803bb436",
       "signer": "zby-official",
       "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M12 7v10M7 12h10\"/><circle cx=\"12\" cy=\"12\" r=\"3\" fill=\"currentColor\" fill-opacity=\"0.3\"/></svg>",
       "previews": [
@@ -438,7 +438,7 @@
       "build": 15,
       "file": "apps/game/tank/xy-game-official-tank-v1.0.0-b15.zby.zip",
       "sizeBytes": 62779,
-      "sha256": "3f6b03d39c9b25c41a36ae41f2f9d95602f27c1862207ac6bc524a9bff9e0aa5",
+      "sha256": "8acf8ea1a66fe7d26539b400791343ff74e5c5b71e8230c10069b895ff33ce21",
       "signer": "zby-official",
       "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"14\" width=\"14\" height=\"5\" rx=\"1\"/><rect x=\"7\" y=\"10\" width=\"8\" height=\"4\" rx=\"1\"/><line x1=\"11\" y1=\"10\" x2=\"20\" y2=\"6\"/><circle cx=\"8\" cy=\"20\" r=\"1.5\" fill=\"currentColor\"/><circle cx=\"14\" cy=\"20\" r=\"1.5\" fill=\"currentColor\"/></svg>",
       "previews": [
@@ -484,8 +484,8 @@
       "version": "1.0.0",
       "build": 15,
       "file": "apps/game/tetris/xy-game-official-tetris-v1.0.0-b15.zby.zip",
-      "sizeBytes": 71660,
-      "sha256": "29156f94b7398a1e251a6f9840ec55c8d3f21b1af8730b399b6ca44c7fb78532",
+      "sizeBytes": 71661,
+      "sha256": "a46c59cd41d9e471c86258c50bf20f5caf820e64756486926a61829352be8266",
       "signer": "zby-official",
       "icon": "<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"11\" y=\"3\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"3\" y=\"11\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"11\" y=\"11\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"15\" y=\"15\" width=\"6\" height=\"6\" rx=\"1\"/></svg>",
       "previews": [
