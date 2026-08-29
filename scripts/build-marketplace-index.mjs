@@ -136,8 +136,8 @@ async function inspectZip(zipPath) {
     for (const [path, f] of Object.entries(zip.files)) {
       if (f.dir) continue;
       if (path === 'manifest.json' || path === 'contract.json' || path === 'README.md' || path.startsWith('versions/')) continue;
-      /* B3：preview-* 二进制附件不计入签名集合（三端统一排除，附件仅作目录展示） */
-      if (/^preview-\d+\.(png|jpe?g|webp)$/i.test(path)) continue;
+      /* B3：icon.png / preview-* 二进制附件不计入签名集合（三端统一排除，附件仅作目录展示） */
+      if (/^(icon\.png|preview-\d+\.(png|jpe?g|webp))$/i.test(path)) continue;
       filesList.push({ path, sha256: sha256(await f.async('uint8array')) });
     }
     filesList.sort((a, b) => a.path.localeCompare(b.path));
