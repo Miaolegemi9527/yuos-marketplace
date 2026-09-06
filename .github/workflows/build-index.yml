@@ -1,18 +1,25 @@
-# yuos-marketplace Actions — push/PR 时校验包 + 重建 index.json
+# yuos-marketplace Actions — 任何 push 均校验包 + 重建/自校验 index.json
+# PRD FIX-BATCH-2026-09-05 Step 1.2 加固：
+#   - 去 paths 过滤（index.json-only / 手工 merge 也被校验，杜绝「新 zip + 旧索引」静默发布）
+#   - concurrency 防并发抖动（排队不取消）
+#   - 每周一 cron 自愈重建（触发链路整体失灵时的最后防线；幂等，无 diff 零提交）
+#   - Self-verify HEAD：重建提交后临时再生成与 HEAD diff，非空即红灯
 name: Build Marketplace Index
 
 on:
   push:
     branches: [main]
-    paths:
-      - 'apps/**'
   pull_request:
-    paths:
-      - 'apps/**'
+  schedule:
+    - cron: '23 3 * * 1'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: build-index
+  cancel-in-progress: false
 
 jobs:
   build-index:
@@ -44,6 +51,7 @@ jobs:
             if (idx.format !== 'yuos-marketplace-index') throw new Error('bad format');
             if (idx.schemaVersion !== 1) throw new Error('bad schemaVersion');
             if (!Array.isArray(idx.apps)) throw new Error('apps not array');
+            if (typeof idx.source?.fallbackBase !== 'string' || idx.source.fallbackBase === '') throw new Error('fallbackBase empty');
             for (const a of idx.apps) {
               if (!a.id || !a.file || !a.sha256 || !a.version) throw new Error('bad app entry: ' + JSON.stringify(a));
             }
@@ -58,3 +66,20 @@ jobs:
           git add index.json
           git diff --cached --quiet || git commit -m "chore: rebuild marketplace index [skip ci]"
           git push
+
+      - name: Self-verify HEAD
+        if: github.event_name == 'push'
+        run: |
+          node scripts/build-marketplace-index.mjs \
+            --root . \
+            --out /tmp/index-verify.json \
+            --base "https://cdn.jsdelivr.net/gh/${{ github.repository }}@${{ github.ref_name }}" \
+            --fallback-base "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}" \
+            --owner "${{ github.repository_owner }}" \
+            --repo "${{ github.event.repository.name }}"
+          if ! diff -q /tmp/index-verify.json index.json > /dev/null; then
+            echo "::error::index.json 与 HEAD 内容不自洽（重建产物与仓库版本 diff 非空）"
+            diff /tmp/index-verify.json index.json | head -40 || true
+            exit 1
+          fi
+          echo "self-verify OK：HEAD index.json 与重建产物一致"

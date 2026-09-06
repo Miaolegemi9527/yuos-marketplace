@@ -6,7 +6,7 @@
  *   1. zip 完整性（可解包 + manifest.json 存在）
  *   2. manifest schema 校验（format=zby-creation / type / id / version）
  *   3. 官方签名验签（ECDSA P-256 + SHA-256，公钥内嵌，与客户端 official-key.ts 同源）
- *   4. 收集 icon.png / preview-*.png / README.md → 生成 index.json
+ *   4. 收集 previews/ 附件（根级 icon.png 兜底）→ 生成 index.json
  *
  * 官方仓库本体位于项目外（~/Documents/Mine/Github/Web/yuos-marketplace/，独立 git 仓库），
  * 本脚本与其内 scripts/build-marketplace-index.mjs 同源，修改须双向同步。
@@ -30,7 +30,10 @@ import JSZip from 'jszip';
 function parseArgs(argv) {
   const args = { root: '.', out: 'index.json', base: '', fallbackBase: '', sourceName: '小语官方坊市', owner: 'yuos-marketplace-owner', repo: 'yuos-marketplace' };
   for (let i = 2; i < argv.length; i += 2) {
-    const key = argv[i].replace(/^--/, '');
+    /* PRD FIX-BATCH-2026-09-05 §13.1：kebab-case CLI 参数归一化为 camelCase 键
+       （--fallback-base → fallbackBase）。原实现 `key in args` 只认 camelCase，
+       kebab-case 参数被静默丢弃，导致索引 fallbackBase 为空、官方 zip 无镜像降级。 */
+    const key = argv[i].replace(/^--/, '').replace(/-([a-z])/g, (_, c) => c.toUpperCase());
     const val = argv[i + 1] ?? '';
     if (key in args) args[key] = val;
   }
@@ -136,7 +139,10 @@ async function inspectZip(zipPath) {
     for (const [path, f] of Object.entries(zip.files)) {
       if (f.dir) continue;
       if (path === 'manifest.json' || path === 'contract.json' || path === 'README.md' || path.startsWith('versions/')) continue;
-      /* B3：icon.png / preview-* 二进制附件不计入签名集合（三端统一排除，附件仅作目录展示） */
+      /* B3：previews/ + icons/ 保留附件目录 + 根级 icon.png / preview-* 旧单文件形式，
+         均不计入签名集合（与 build-zby-app 签名侧 / CreationPackager 导入侧三端一致，
+         PRD FIX-BATCH-2026-09-05 §9.1 #4：previews/ 目录形式缺失导致新包验签全失败） */
+      if (path.startsWith('previews/') || path.startsWith('icons/')) continue;
       if (/^(icon\.png|preview-\d+\.(png|jpe?g|webp))$/i.test(path)) continue;
       filesList.push({ path, sha256: sha256(await f.async('uint8array')) });
     }
